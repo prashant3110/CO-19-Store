@@ -1,0 +1,33 @@
+<html>
+<head>
+	<title>HOME</title>
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <script type="text/javascript">
+       function getout() {
+          var val = confirm("Do you want to logout?");
+        if( val==false){
+          return false;
+        }
+       };
+     </script>
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href={% url 'myhome' %} style=" background: black;color: yellow"><b>CO-19 Store</b></a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href={% url 'myhome' %} style=" background: black;color: white"><i class="fa fa-home"></i> <b>Home</b></a></li>
+      <li><a href={% url 'cart' request.session.usid %} style=" background: black;color: red"><i class="fa fa-shopping-basket"></i><b> Cart</b></a></li>
+      <li><a href={% url 'personaldet' request.session.usid  %} style=" background: black;color: white"><i class="fa fa-user-circle"></i><b> Personal Details</b></a></li>
+      <li><a href={% url 'aboutUs' %} style=" background:black; color: red"><i class="fa fa-info-circle"></i> <b>About Us</b></a></li>
+      <li><a onclick="return getout();" href={% url 'logout' %} style=" background: black;color: white" ><i class="fa fa-sign-out"></i> <b>Logout</b></a></li>
+      <li><a href=# style="float:right; background: black;color: red" ><b>{{user.name}}</b></a></li>
+    </ul>
+  </div>
+</nav>
+</body>

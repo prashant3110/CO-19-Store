@@ -1,1 +1,10 @@
+Front End : HTML , CSS
+
+Back End : Django(A popular Python Web Framework)
+
+Programming Language used : Python
+
+IDE : PyCharm
+
+Text Editor : Sublime
 

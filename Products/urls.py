@@ -15,4 +15,4 @@ urlpatterns = [
     path('addtocart/<int:userid>',views.addtocart,name="addtocart"),
     path('removefromcart/<int:itemid>',views.removefromcart,name="removefromcart"),
     path('placeorder',views.placeorder,name="placeorder")
-]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) 
